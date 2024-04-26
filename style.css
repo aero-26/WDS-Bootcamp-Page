@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #00a9ff;
+  --dark-grey: #1b2522;
+  --white: #ffffff;
+  --no-space: 0 0 0 0;
+  --lgit-grey: #e1dede;
+  --hover-blue: #038bd0;
+  --font-2rem: 2rem;
+}
+
+body {
+  color: var(--dark-grey);
+  font-family: Cambria;
+  margin: var(--no-space);
+}
+
+ul {
+  list-style-type: none;
+  padding: var(--no-space);
+  display: flex;
+  margin: var(--no-space);
+}
+
+h1 {
+  margin: var(--no-space);
+}
+
+li {
+  padding: 0 1rem;
+}
+
+a:hover {
+  color: var(--lgit-grey);
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+.navbar {
+  background-color: var(--dark-grey);
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  align-items: center;
+}
+
+.top-navbar {
+  position: fixed;
+  min-width: 100%;
+  top: 0;
+}
+
+.navbar img {
+  width: 3rem;
+  height: 2.3rem;
+}
+
+.intro {
+  height: 45rem;
+  background-image: url(./img/header_image.jpg);
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro h1 {
+  font-size: 3rem;
+  line-height: 5rem;
+}
+
+.intro img:last-child {
+  position: relative;
+  top: 15rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.intro span {
+  font-size: 1.5rem;
+}
+
+.btn {
+  background-color: var(--blue);
+  border-radius: 100px;
+  padding: 0.2rem 1rem;
+}
+
+.learn-more {
+  margin: 1rem;
+}
+
+.btn:hover {
+  background-color: var(--hover-blue);
+}
+
+.curriculum {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(auto, 450px));
+  grid-template-areas:
+    "z z"
+    "a b"
+    "c d"
+    "e f";
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.curriculum h1 {
+  grid-area: z;
+  text-align: center;
+  margin: 2rem;
+  font-size: var(--font-2rem);
+}
+
+.grid-a:nth-child(4) {
+  grid-area: c;
+}
+.grid-a:nth-child(2) {
+  grid-area: a;
+}
+.grid-a:nth-child(3) {
+  grid-area: e;
+}
+
+.curriculum img {
+  width: 3rem;
+  margin: 0 1.2rem;
+}
+
+.curriculum div {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.offer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--blue);
+  color: var(--white);
+  margin: 3rem 0;
+}
+
+.offer h1 {
+  font-size: 3rem;
+}
+
+.offer p {
+  width: 300px;
+  text-align: center;
+}
+
+.contact {
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+}
+
+.contact label {
+  margin: 0.5rem 0;
+}
+
+.contact h1 {
+  font-size: var(--font-2rem);
+}
+
+.contact input,
+.contact textarea {
+  width: 30rem;
+  resize: vertical;
+}
+
+.contact input {
+  height: 2rem;
+}
+
+form {
+  max-width: 50rem;
+}
+
+.contact button {
+  display: block;
+  position: relative;
+  left: 25.7rem;
+  border: none;
+  color: var(--white);
+  border-radius: 3px;
+  font-size: 1rem;
+  margin: 0.3rem 0;
+}

@@ -9,13 +9,16 @@
   --no-space: 0 0 0 0;
   --lgit-grey: #e1dede;
   --hover-blue: #038bd0;
+  --pricing-background: #dcf4ff;
   --font-2rem: 2rem;
+  --inactive: #777;
 }
 
 body {
   color: var(--dark-grey);
   font-family: Cambria;
   margin: var(--no-space);
+  font-family: "Montserrat", sans-serif;
 }
 
 ul {
@@ -150,22 +153,79 @@ label {
 }
 
 .offer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   background-color: var(--blue);
   color: var(--white);
   margin: 3rem 0;
+  padding: 1rem 0;
 }
 
 .offer h1 {
-  font-size: 3rem;
+  font-size: 2rem;
+  display: inline-block;
 }
 
-.offer p {
-  width: 300px;
+.offer h2 {
+  font-weight: 400;
+}
+
+.offer h1::after {
+  content: "/mo";
+  color: var(--inactive);
+  font-size: 1rem;
+}
+
+.pricing {
+  color: var(--dark-grey);
+  padding: 1rem;
+  display: flex;
   text-align: center;
+  align-items: center;
+  margin: 0 1rem;
+  justify-content: center;
+}
+
+.pricing ul {
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+
+.pricing ul li {
+  text-align: start;
+  margin: 0.2rem 0;
+}
+
+.inactive {
+  text-decoration: line-through;
+  color: var(--inactive);
+}
+
+.basic,
+.pro {
+  background-color: var(--pricing-background);
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.basic {
+  border-right: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.pro {
+  border-left: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.preferred li:last-child {
+  margin-bottom: 2rem;
+}
+
+.preferred {
+  background-color: var(--white);
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 .contact {
@@ -205,4 +265,28 @@ form {
   border-radius: 3px;
   font-size: 1rem;
   margin: 0.3rem 0;
+}
+
+@media screen and (max-width: 700px) {
+  .pricing {
+    flex-direction: column;
+  }
+
+  .basic,
+  .preferred,
+  .pro {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+    padding-bottom: 1.5rem;
+  }
+
+  .offer ul li {
+    text-align: center;
+  }
+
+  .inactive {
+    display: none;
+  }
 }
